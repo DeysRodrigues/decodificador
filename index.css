@@ -1,0 +1,228 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+:root {
+  --background: #f3f5fc;
+  --cor-principal: #4f1894;
+}
+.inputs {
+  padding: 20px 100px;
+}
+
+body {
+  background: var(--background);
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+
+  display: flex;
+  justify-content: center;
+  gap: 5em;
+}
+
+.box1 {
+  float: left;
+}
+
+.box1 textarea {
+  background: #e6e6e6;
+  color: var(--cor-principal);
+  font-size: 32px;
+  padding: 2rem;
+  resize: none;
+  border: none;
+  max-width: 30em;
+  min-width: 100%;
+  height: 35rem;
+  border-radius: 20px;
+  outline: 0;
+}
+
+textarea::placeholder {
+  color: var(--cor-principal);
+}
+
+.aviso {
+  color: var(--cor-principal);
+
+  display: flex;
+  justify-content: left;
+  gap: 5px;
+  font-weight: normal;
+  text-align: center;
+  font-size: 14px;
+}
+
+.botao1,
+.botao2 {
+  font-size: 16px;
+  position: relative;
+  cursor: pointer;
+  margin: 0.5rem;
+  padding: 0.7rem;
+  width: 200px;
+  margin: 0.5rem;
+  margin-top: 20px;
+  padding: 0.7rem;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+}
+
+.botao1 {
+  background: var(--cor-principal);
+  color: white;
+  border: none;
+}
+
+.botao2 {
+  background: #d8dfe8;
+  color: var(--cor-principal);
+  border: 3px solid var(--cor-principal);
+}
+
+.box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  max-width: 30em;
+  float: right;
+  height: 45em;
+  background: rgba(255, 255, 255, 1);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(5.5px);
+  -webkit-backdrop-filter: blur(5.5px);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+#box-img {
+  width: 25em;
+}
+.box h3 {
+  width: 18rem;
+  text-align: center;
+}
+
+.box p {
+  font-size: 14px;
+  text-align: center;
+}
+
+.botao3 {
+  display: none;
+  background: #ffffff;
+  color: var(--cor-principal);
+  width: 200px;
+  margin: 0.5rem;
+  padding: 0.7rem;
+  border-radius: 20px;
+  margin-top: 20px;
+  cursor: pointer;
+  border: 1px solid var(--cor-principal);
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+}
+
+.box textarea {
+  padding: 2rem;
+  color: var(--cor-principal);
+  font-size: 32px;
+  resize: none;
+  border: none;
+  width: 30em;
+  height: 100%;
+  background: #f3f5fc;
+  outline: 0;
+  display: none;
+}
+#trocarTemaBotao {
+  display: flex;
+  align-items: center;
+  flex-direction: row-reverse;
+  border: solid var(--cor-principal) 3px;
+  gap: 10px;
+  padding: 10px;
+  border-radius: 30px;
+}
+.foot {
+  background-color: #4f1894;
+  padding: 1em;
+  margin-top: 3em;
+  text-align: center;
+  color: #d8dfe8;
+}
+.name {
+  color: var(--cor-principal);
+  background-color: #d8dfe8;
+  text-decoration: none;
+  transition: font-size 0.3s ease-in-out;
+  border-radius: 30px;
+  padding: 8px;
+}
+.name:hover {
+  background-color: #4f0076;
+  color: #e6e6e6;
+  font-size: 18px;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    gap: 2em;
+  }
+  .inputs {
+    display: flex;
+  }
+  .box1 {
+    float: none;
+  }
+  .box {
+    float: none;
+    height: 15em;
+    margin: 30px;
+  }
+  .box img {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .container {
+    flex-direction: column;
+    gap: 2em;
+  }
+  .inputs {
+    display: flex;
+  }
+
+  .box1 textarea {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .box textarea {
+    width: 100%;
+    height: 100%;
+    font-size: 16px;
+  }
+
+  .botoes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  .foot {
+    display: none;
+  }
+}
